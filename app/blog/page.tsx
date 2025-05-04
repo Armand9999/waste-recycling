@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+
 import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
 import posts from "../data/posts";
