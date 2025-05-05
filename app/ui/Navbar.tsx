@@ -18,8 +18,8 @@ export default function Navbar() {
         <nav className="hidden md:flex space-x-6 text-white">
           <Link href="/">Home</Link>
           <Link href="/about">About Us</Link>
-          <Link href="/contact">Contact</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
 
         <button

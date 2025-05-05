@@ -9,8 +9,15 @@ import posts from "../data/posts";
 
 export default function BlogPage() {
   const [activePost, setActivePost] = useState(Object);
+  const [active, isActive] = useState(false)
+
+  const handleSetActivePost = (post: Object) => {
+    isActive(!active)
+    setActivePost(post)
+  }
 
   return (
+    
     <div className="flex flex-col min-h-screen ">
         <Navbar />
         <div className="max-w-4xl mx-auto">
@@ -20,7 +27,7 @@ export default function BlogPage() {
                 <div
                 key={post.slug}
                 className="bg-white p-6 rounded-lg shadow hover:shadow-md transition cursor-pointer"
-                onClick={() => setActivePost(post)}
+                onClick={() => handleSetActivePost(post)}
                 >
                 <h2 className="text-2xl font-semibold text-gray-800 mb-2">{post.title}</h2>
                 <p className="text-sm text-gray-500 mb-4">{post.date}</p>
@@ -32,12 +39,12 @@ export default function BlogPage() {
         </div>
 
         {/* Overlay Modal */}
-        {activePost && (
+        {active && (
             <div className="fixed inset-0 bg-grey bg-opacity-50 z-50 flex items-center justify-center px-4">
             <div className="bg-white max-w-2xl w-full p-6 rounded-lg shadow-lg relative overflow-y-auto max-h-[80vh]">
                 <button
                 className="absolute top-4 right-4 text-gray-600 hover:text-red-500"
-                onClick={() => setActivePost(null)}
+                onClick={() => isActive(false)}
                 >
                 &#x2715;
                 </button>
