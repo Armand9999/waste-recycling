@@ -8,7 +8,7 @@ import Footer from "../ui/Footer";
 import posts from "../data/posts";
 
 export default function BlogPage() {
-  const [activePost, setActivePost] = useState(null);
+  const [activePost, setActivePost] = useState(Object);
 
   return (
     <div className="flex flex-col min-h-screen ">
