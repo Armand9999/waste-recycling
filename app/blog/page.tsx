@@ -11,7 +11,7 @@ export default function BlogPage() {
   const [activePost, setActivePost] = useState(Object);
   const [active, isActive] = useState(false)
 
-  const handleSetActivePost = (post: Object.entries()) => {
+  const handleSetActivePost = (post: Object) => {
     isActive(!active)
     setActivePost(post)
   }
