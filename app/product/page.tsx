@@ -118,7 +118,7 @@ export default function ProductsPage() {
             ) : (
                 <>
                 <ul className="mb-4 space-y-2">
-                    {cart.map((item, index) => (
+                    {cart.map((item) => (
                         
                         <li key={item.id} className="flex justify-between items-center">
                             <div>
