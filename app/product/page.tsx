@@ -9,21 +9,21 @@ const products = [
   {
     id: 1,
     name: "Eco Bin - Household Recycling Bin",
-    image: "",
+    image: null,
     description: "A durable, labeled recycling bin made from 100% recycled plastic.",
     price: 19.99
   },
   {
     id: 2,
     name: "Compost Starter Kit",
-    image: "",
+    image: null,
     description: "Everything you need to start composting at home, eco-friendly and easy!",
     price: 34.99
   },
   {
     id: 3,
     name: "Reusable Sorting Bags (Set of 4)",
-    image: "",
+    image: null,
     description: "Color-coded bags for easy waste sorting and recycling.",
     price: 24.99
   }
@@ -47,7 +47,7 @@ export default function ProductsPage() {
     setCart((prev) => {
         const existing = prev.find((item: Product) => item.id === product.id);
         if (existing) {
-          return prev.map((item: any) =>
+          return prev.map((item: Product) =>
             item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
           );
         } else {
@@ -60,7 +60,7 @@ export default function ProductsPage() {
   const updateQuantity = (id: number, delta: number) => {
     setCart((prev) =>
       prev
-        .map((item: any) =>
+        .map((item: Product) =>
           item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item
         )
     );
