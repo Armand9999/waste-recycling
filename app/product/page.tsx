@@ -44,9 +44,9 @@ export default function ProductsPage() {
 
   const addToCart = (product: Product) => {
     setCart((prev) => {
-        const existing = prev.find((item: any) => item.id === product.id);
+        const existing = prev.find((item) => item.id === product.id);
         if (existing) {
-          return prev.map((item: any) =>
+          return prev.map((item) =>
             item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
           );
         } else {
@@ -59,7 +59,7 @@ export default function ProductsPage() {
   const updateQuantity = (id: number, delta: number) => {
     setCart((prev) =>
       prev
-        .map((item: any) =>
+        .map((item) =>
           item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item
         )
     );
