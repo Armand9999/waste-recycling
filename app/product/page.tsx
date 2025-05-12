@@ -35,11 +35,11 @@ type Product = {
   image: string;
   description: string;
   price: number;
-  quantity: number;
+  quantity?: number;
 }
 
 export default function ProductsPage() {
-    const product: Product = {id: 0, name: "", image: "", description: "", price: 0, quantity: 0}
+    const product: Product = {id: 0, name: "", image: "", description: "", price: 0}
     
   const [cart, setCart] = useState([product]);
 
