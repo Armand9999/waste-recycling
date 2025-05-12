@@ -9,21 +9,21 @@ const products = [
   {
     id: 1,
     name: "Eco Bin - Household Recycling Bin",
-    image: null,
+    image: "",
     description: "A durable, labeled recycling bin made from 100% recycled plastic.",
     price: 19.99
   },
   {
     id: 2,
     name: "Compost Starter Kit",
-    image: null,
+    image: "",
     description: "Everything you need to start composting at home, eco-friendly and easy!",
     price: 34.99
   },
   {
     id: 3,
     name: "Reusable Sorting Bags (Set of 4)",
-    image: null,
+    image: "",
     description: "Color-coded bags for easy waste sorting and recycling.",
     price: 24.99
   }
