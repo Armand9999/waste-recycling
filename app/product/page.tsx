@@ -5,6 +5,18 @@ import Image from "next/image";
 import Footer from "../ui/Footer";
 import Navbar from "../ui/Navbar";
 
+type Product = {
+  id: number;
+  name: string;
+  image: string;
+  description: string;
+  price: number;
+}
+
+type CartItem = Product & {
+  quantity: number;
+};
+
 const products = [
   {
     id: 1,
@@ -29,20 +41,13 @@ const products = [
   }
 ];
 
-type Product = {
-  id: number;
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-}
 
 export default function ProductsPage() {
-    const product: Product = {id: 0, name: "", image: "", description: "", price: 0}
+    //const product: Product = {id: 0, name: "", image: "", description: "", price: 0}
     
-  const [cart, setCart] = useState([product]);
+  const [cart, setCart] = useState<CartItem[]>([]);
 
-  const addToCart = (product: Product) => {
+  const addToCart = (product) => {
     setCart((prev) => {
         const existing = prev.find((item) => item.id === product.id);
         if (existing) {
@@ -71,7 +76,7 @@ export default function ProductsPage() {
 
   
 
-  const total = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
+  const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 
   return (
     <div className="flex flex-col min-h-screen ">
@@ -114,36 +119,36 @@ export default function ProductsPage() {
                 <>
                 <ul className="mb-4 space-y-2">
                     {cart.map((item, index) => (
-                        index !== 0 && (
-                            <li key={item.id} className="flex justify-between items-center">
-                                <div>
-                                    <span className="font-medium">{item.name}</span>
-                                    <span className="text-sm text-gray-500 ml-2">x{item.quantity}</span>
-                                </div>
-                                <div className="flex items-center space-x-2">
-                                    <button
-                                        onClick={() => updateQuantity(item.id, -1)}
-                                        className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-                                    >
-                                        -
-                                    </button>
-                                    <span>{item.quantity}</span>
-                                    <button
-                                        onClick={() => updateQuantity(item.id, 1)}
-                                        className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
-                                    >
-                                        +
-                                    </button>   
-                                    <span className="ml-4 font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
-                                    <button 
-                                        onClick={() => removeFromCart(item.id)}
-                                        className="font-bold text-red-300 hover:text-red-500"
-                                    > 
-                                        &#x2715; 
-                                    </button>
-                                </div>
-                            </li>
-                    )))}
+                        
+                        <li key={item.id} className="flex justify-between items-center">
+                            <div>
+                                <span className="font-medium">{item.name}</span>
+                                <span className="text-sm text-gray-500 ml-2">x{item.quantity}</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <button
+                                    onClick={() => updateQuantity(item.id, -1)}
+                                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                                >
+                                    -
+                                </button>
+                                <span>{item.quantity}</span>
+                                <button
+                                    onClick={() => updateQuantity(item.id, 1)}
+                                    className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+                                >
+                                    +
+                                </button>   
+                                <span className="ml-4 font-semibold">${(item.price * item.quantity).toFixed(2)}</span>
+                                <button 
+                                    onClick={() => removeFromCart(item.id)}
+                                    className="font-bold text-red-300 hover:text-red-500"
+                                > 
+                                    &#x2715; 
+                                </button>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
                 <div className="font-semibold text-right">
                     Total: <span className="text-green-700">${total}</span>
