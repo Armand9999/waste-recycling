@@ -1,4 +1,3 @@
-// app/blog/page.tsx
 "use client";
 
 import { useState } from "react";
@@ -6,6 +5,7 @@ import { useState } from "react";
 import Navbar from "../ui/Navbar";
 import Footer from "../ui/Footer";
 import posts from "../data/posts";
+import Image from "next/image";
 
 export default function BlogPage() {
   const [activePost, setActivePost] = useState(Object);
@@ -40,7 +40,7 @@ export default function BlogPage() {
 
         {/* Overlay Modal */}
         {active && (
-            <div className="fixed inset-0 bg-grey bg-opacity-50 z-50 flex items-center justify-center px-4">
+            <div className="fixed inset-0 bg-grey bg-opacity-50 z-50 flex items-center min-h-screen justify-center px-4">
             <div className="bg-white max-w-2xl w-full p-6 rounded-lg shadow-lg relative overflow-y-auto max-h-[80vh]">
                 <button
                 className="absolute top-4 right-4 text-gray-600 hover:text-red-500"
@@ -49,6 +49,21 @@ export default function BlogPage() {
                 &#x2715;
                 </button>
                 <h2 className="text-2xl font-bold mb-2 text-green-700">{activePost.title}</h2>
+                <div className="grid grid-flow-row auto-rows-max md:grid-cols-3 gap-2 ">
+                    {
+                        activePost.images.map((image: string, index: number) => (
+                            <Image
+                                key={index}
+                                alt=""
+                                src={image}
+                                width="500"
+                                height="400"
+                                className={`md:shadow-lg rounded-md ${index === 0 ? 'md:col-span-3 w-full' : ''} ${index === 2 ? 'md:col-span-2 h-28' : ''}`}
+                            />
+                        ))  
+            
+                    }
+                </div>
                 <p className="text-sm text-gray-500 mb-4">{activePost.date}</p>
                 <div className="prose" dangerouslySetInnerHTML={{ __html: activePost.content }}></div>
             </div>

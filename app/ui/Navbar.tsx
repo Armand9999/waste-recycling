@@ -18,6 +18,7 @@ export default function Navbar() {
         <nav className="hidden md:flex space-x-6 text-white">
           <Link href="/">Home</Link>
           <Link href="/about">About Us</Link>
+          <Link href="/product">Product</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
         </nav>
@@ -35,8 +36,9 @@ export default function Navbar() {
         <div className="md:hidden grid grid-col bg-green-700 text-white px-4 pb-4 space-y-2">
           <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
           <Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link>
-          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
+          <Link href="/product" onClick={() => setIsOpen(false)}>Product</Link>
           <Link href="/blog" onClick={() => setIsOpen(false)}>Blog</Link>
+          <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
         </div>
       )}
     </header>
