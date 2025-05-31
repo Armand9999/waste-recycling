@@ -10,14 +10,14 @@ export default function Contact() {
 
       <main className="flex-grow container mx-auto p-8">
         <section className="max-w-3xl mx-auto space-y-12">
-          <h2 className="text-4xl font-bold text-center mb-12">Contact Us</h2>
+          <h2 className="text-4xl font-bold text-center text-green-700 mb-12">Contact Us</h2>
 
           <div className="space-y-8 text-gray-700">
             <div className="flex items-start gap-4">
               <MapPin className="text-green-600 w-8 h-8" />
               <div>
                 <h3 className="text-xl font-semibold">Address</h3>
-                <p>123 Eco Street, Green City, Planet Earth</p>
+                <p>Nomayos, Yaoundé, Cameroon</p>
               </div>
             </div>
 
@@ -25,7 +25,7 @@ export default function Contact() {
               <Mail className="text-green-600 w-8 h-8" />
               <div>
                 <h3 className="text-xl font-semibold">Email</h3>
-                <p>info@ecorecycle.com</p>
+                <p>info@dhafarecycling.com</p>
               </div>
             </div>
 
@@ -33,7 +33,8 @@ export default function Contact() {
               <Phone className="text-green-600 w-8 h-8" />
               <div>
                 <h3 className="text-xl font-semibold">Phone</h3>
-                <p>+1 (234) 567-8900</p>
+                <p>CMR: +237 9864-1003</p>
+                <p>USA: +1 (240) 476-7581</p>
               </div>
             </div>
 

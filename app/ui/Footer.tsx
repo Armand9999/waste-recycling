@@ -7,7 +7,7 @@ export default function Footer() {
         
         {/* Company Info */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">EcoRecycle</h2>
+          <h2 className="text-2xl font-bold mb-4">DHAFA Recycling</h2>
           <p>Creating a cleaner, greener planet through sustainable recycling solutions.</p>
         </div>
 
@@ -27,15 +27,15 @@ export default function Footer() {
           <ul className="space-y-4">
             <li className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />
-              123 Eco Street, Green City
+              Nomayos, Yaoundé, Cameroon
             </li>
             <li className="flex items-center gap-2">
               <Mail className="w-5 h-5" />
-              info@ecorecycle.com
+              info@dhafarecycling.com
             </li>
             <li className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
-              +1 (234) 567-8900
+              +237 9864-1003
             </li>
           </ul>
         </div>
@@ -45,7 +45,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-green-600 mt-8 py-4">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-8">
-          <p className="text-sm">&copy; {new Date().getFullYear()} EcoRecycle. All rights reserved.</p>
+          <p className="text-sm">&copy; {new Date().getFullYear()} DHAFA Recycling. All rights reserved.</p>
 
           {/* Social Media */}
           <div className="flex space-x-6 mt-4 md:mt-0">

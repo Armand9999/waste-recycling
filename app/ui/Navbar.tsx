@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl flex flex-cols-2 gap-2 font-bold text-white">
           <img src="/images/logo.png" alt="Logo" className="h-8 w-8" />
-          <p>EcoRecycle</p>
+          <p>DHAFA Recycling</p>
         </Link>
 
         <nav className="hidden md:flex space-x-6 text-white">

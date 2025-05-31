@@ -8,7 +8,7 @@ export default function About() {
       <Navbar />
       
       <main className="flex-grow container mx-auto p-8">
-        <h2 className="text-4xl font-bold mb-6">About Us</h2>
+        <h2 className="text-4xl font-bold text-green-700 mb-6">About Us</h2>
 
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <Image 
@@ -21,7 +21,7 @@ export default function About() {
           
           <div>
             <p className="mb-4">
-              At EcoRecycle, we believe in a sustainable future. For over a decade, we have been committed to providing innovative recycling solutions to communities and businesses.
+              At DHAFA Recycling, we believe in a sustainable future. We have been committed to providing innovative plastic recycling solutions to communities and businesses.
             </p>
             <p>
               Our dedicated team ensures that waste is minimized, materials are reused, and environmental impact is reduced — creating a greener planet for future generations.

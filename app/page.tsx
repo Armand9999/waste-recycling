@@ -9,7 +9,7 @@ export default function Home() {
       <Navbar />
 
       <main className="flex-grow container mx-auto p-8 text-center">
-        <h2 className="text-4xl font-bold mb-6">Welcome to EcoRecycle</h2>
+        <h2 className="text-4xl font-bold text-green-700 mb-6">Welcome to DHAFA Recycling</h2>
         <p className="text-lg mb-6">Promoting a cleaner, greener tomorrow through responsible recycling.</p>
 
         <section className="relative h-screen min-w-vh overflow-hidden mx-auto mb-6">
@@ -37,19 +37,19 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-1 gap-2">
           <div className="p-4 shadow-md rounded bg-white">
             <h3 className="font-semibold text-xl mb-2">Plastic Recycling</h3>
             <p>Helping reduce plastic pollution through efficient collection and processing.</p>
           </div>
-          <div className="p-4 shadow-md rounded bg-white">
+          {/* <div className="p-4 shadow-md rounded bg-white">
             <h3 className="font-semibold text-xl mb-2">Metal Recycling</h3>
             <p>Giving metals a second life while conserving natural resources.</p>
           </div>
           <div className="p-4 shadow-md rounded bg-white">
             <h3 className="font-semibold text-xl mb-2">E-Waste Recycling</h3>
             <p>Safe disposal and recovery of valuable materials from electronic waste.</p>
-          </div>
+          </div> */}
         </div>
       </main>
 
