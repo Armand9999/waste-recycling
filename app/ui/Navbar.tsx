@@ -11,7 +11,7 @@ export default function Navbar() {
     <header className="bg-green-700 shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <Link href="/" className="text-2xl flex flex-cols-2 gap-2 font-bold text-white">
-          <img src="/images/logo.png" alt="Logo" className="h-8 w-8" />
+          <img src="/images/logo.png" alt="Logo" className="h-8 w-8 rounded-full" />
           <p>DHAFA Recycling</p>
         </Link>
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-white-50">
       <Navbar />
       
       <main className="flex-grow container mx-auto p-8">

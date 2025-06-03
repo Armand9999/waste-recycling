@@ -18,7 +18,7 @@ export default function BlogPage() {
 
   return (
     
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen bg-white-50">
         <Navbar />
         <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl font-bold mb-8 text-center text-green-700 mt-4">Our Blog</h1>

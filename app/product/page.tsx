@@ -79,7 +79,7 @@ export default function ProductsPage() {
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
 
   return (
-    <div className="flex flex-col min-h-screen ">
+    <div className="flex flex-col min-h-screen bg-white-50">
         <Navbar />
         <div className="min-h-screen bg-gray-50 py-12 px-6">
         <div className="max-w-6xl mx-auto">
