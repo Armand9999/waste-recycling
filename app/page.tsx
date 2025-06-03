@@ -8,11 +8,13 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-white-50">
       <Navbar />
 
-      <main className="flex-grow container mx-auto p-8 text-center">
-        <h2 className="text-4xl font-bold text-green-700 mb-6">Welcome to DHAFA Recycling</h2>
-        <p className="text-lg mb-6">Promoting a cleaner, greener tomorrow through responsible recycling.</p>
+      <main className="flex-grow text-center">
+        <div className="container mx-auto p-8">
+          <h2 className="text-4xl font-bold text-green-700 mb-6">Welcome to DHAFA Recycling</h2>
+          <p className="text-lg mb-6">Promoting a cleaner, greener tomorrow through responsible recycling.</p>
+        </div>
 
-        <section className="relative h-screen min-w-vh overflow-hidden mx-auto mb-6 shadow-md">
+        <section className="relative h-screen w-full overflow-hidden mb-6 shadow-md">
           
           {/* Background Video */}
           <video
@@ -38,34 +40,38 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="grid md:grid-cols-1 gap-2">
-          <div className="p-4 shadow-md rounded bg-white">
-            <h3 className="font-semibold text-xl mb-2">Plastic Recycling</h3>
-            <p>Helping reduce plastic pollution through efficient collection and processing.</p>
+        <div className="container mx-auto p-8">
+          <div className="grid md:grid-cols-1 gap-2">
+            <div className="p-4 shadow-md rounded bg-white">
+              <h3 className="font-semibold text-xl mb-2">Plastic Recycling</h3>
+              <p>Helping reduce plastic pollution through efficient collection and processing.</p>
+            </div>
+            {/* <div className="p-4 shadow-md rounded bg-white">
+              <h3 className="font-semibold text-xl mb-2">Metal Recycling</h3>
+              <p>Giving metals a second life while conserving natural resources.</p>
+            </div>
+            <div className="p-4 shadow-md rounded bg-white">
+              <h3 className="font-semibold text-xl mb-2">E-Waste Recycling</h3>
+              <p>Safe disposal and recovery of valuable materials from electronic waste.</p>
+            </div> */}
           </div>
-          {/* <div className="p-4 shadow-md rounded bg-white">
-            <h3 className="font-semibold text-xl mb-2">Metal Recycling</h3>
-            <p>Giving metals a second life while conserving natural resources.</p>
-          </div>
-          <div className="p-4 shadow-md rounded bg-white">
-            <h3 className="font-semibold text-xl mb-2">E-Waste Recycling</h3>
-            <p>Safe disposal and recovery of valuable materials from electronic waste.</p>
-          </div> */}
         </div>
 
         <section className="my-12 py-8 bg-white">
-          <h2 className="text-3xl font-bold text-green-700 mb-8">Our Sponsors</h2>
-          <div className="flex flex-wrap justify-center items-center gap-8">
-            <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
-              {/* <span className="text-xl font-semibold text-gray-500">Philip E. & Carole R. <br /> Ratcliffe Foundation</span> */}
-              <Image src="/images/sponsors/ratcliffe_logo-dark.png" alt="Philip E. & Carole R. Ratcliffe Foundation" width={200} height={200}  className="w-32 h-32 object-contain" />
+          <div className="container mx-auto p-8">
+            <h2 className="text-3xl font-bold text-green-700 mb-8">Our Sponsors</h2>
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                {/* <span className="text-xl font-semibold text-gray-500">Philip E. & Carole R. <br /> Ratcliffe Foundation</span> */}
+                <Image src="/images/sponsors/ratcliffe_logo-dark.png" alt="Philip E. & Carole R. Ratcliffe Foundation" width={200} height={200}  className="w-32 h-32 object-contain" />
+              </div>
+              {/* <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <span className="text-xl font-semibold text-gray-500">GreenFuture</span>
+              </div>
+              <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+                <span className="text-xl font-semibold text-gray-500">SustainCorp</span>
+              </div> */}
             </div>
-            {/* <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
-              <span className="text-xl font-semibold text-gray-500">GreenFuture</span>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
-              <span className="text-xl font-semibold text-gray-500">SustainCorp</span>
-            </div> */}
           </div>
         </section>
       </main>
