@@ -10,23 +10,45 @@ export default function About() {
       <main className="flex-grow container mx-auto p-8">
         <h2 className="text-4xl font-bold text-green-700 mb-6">About Us</h2>
 
-        <div className="flex flex-col md:flex-row gap-8 items-center">
-          <Image 
-            src="/about-us.jpg" 
-            alt="Our Team" 
-            width={500} 
-            height={300} 
-            className="rounded-lg"
-          />
-          
-          <div>
-            <p className="mb-4">
+        <div className="flex flex-col gap-8 mb-4">
+          <div className="text-center w-full  mx-auto bg-grey-50 p-6 rounded-lg shadow-lg">
+            <p className="mb-4 text-pretty">
               At DHAFA Recycling, we believe in a sustainable future. We have been committed to providing innovative plastic recycling solutions to communities and businesses.
-            </p>
-            <p>
               Our dedicated team ensures that waste is minimized, materials are reused, and environmental impact is reduced — creating a greener planet for future generations.
             </p>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-4">
+            <Image 
+              src="/images/about/team.jpg" 
+              alt="Our Team" 
+              width={400} 
+              height={300} 
+              className="w-full h-[400px] object-fill"
+            />
+            <Image 
+              src="/images/about/team-1.jpg" 
+              alt="Team Working" 
+              width={400} 
+              height={300} 
+              className="w-full h-[400px] object-fill"
+            />
+            <Image 
+              src="/images/about/team-2.jpg" 
+              alt="Team Collaboration" 
+              width={400} 
+              height={300} 
+              className="w-full h-[400px] object-fill"
+            />
+            <Image 
+              src="/images/about/team-4.jpg" 
+              alt="Team Meeting" 
+              width={400} 
+              height={300} 
+              className="w-full h-[400px] object-fill"
+            />
+          </div>
+          
+          
         </div>
         <section>
           <h2 className="text-2xl font-bold mb-6 text-center">How It Works</h2>
@@ -59,26 +81,26 @@ export default function About() {
         </section>
 
         {/* Meet the Team */}
-        <section>
-        <h2 className="text-2xl font-bold mb-6 text-center">Meet the Team</h2>
+        <section >
+        <h2 className="text-2xl font-bold my-6 text-center">Meet the Team</h2>
 
         <div className="grid md:grid-cols-3 gap-8 text-center">
             {[
             {
-                name: "John Doe",
+                name: "Sylvain Nzeyang",
                 role: "Founder & CEO",
-                img: "/team-member-1.jpg",
+                img: "/images/about/ceo.jpeg"
             },
-            {
-                name: "Jane Smith",
-                role: "Operations Manager",
-                img: "/team-member-2.jpg",
-            },
-            {
-                name: "Mike Johnson",
-                role: "Environmental Specialist",
-                img: "/team-member-3.jpg",
-            },
+            // {
+            //     name: "Jane Smith",
+            //     role: "Operations Manager",
+            //     img: "/team-member-2.jpg",
+            // },
+            // {
+            //     name: "Mike Johnson",
+            //     role: "Environmental Specialist",
+            //     img: "/team-member-3.jpg",
+            // },
             ].map((member, idx) => (
             <div
                 key={idx}
