@@ -83,8 +83,8 @@ export default function ProductsPage() {
   const handlePayment = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Generate a unique transaction ID
-    const transactionId = 'DHAFA_' + Math.floor(Math.random() * 10000000000).toString();
+    // Generate a unique transaction ID (commented out as it's currently unused)
+    // const transactionId = 'DHAFA_' + Math.floor(Math.random() * 10000000000).toString();
     
     // Prepare the payment data
     // const paymentData = {
@@ -102,14 +102,12 @@ export default function ProductsPage() {
     // };
     
     // Initialize CinetPay SDK
-    // @ts-ignore - CinetPay is loaded from external script
     // CinetPay.setConfig({
     //   apikey: 'YOUR_CINETPAY_API_KEY', // Replace with your actual API key
     //   site_id: 'YOUR_SITE_ID',         // Replace with your actual Site ID
     //   mode: 'TEST'               // Use 'TEST' for testing
     // });
     
-    // @ts-ignore - CinetPay is loaded from external script
   //   CinetPay.getCheckout({
   //     transaction_id: paymentData.transaction_id,
   //     amount: paymentData.amount,
