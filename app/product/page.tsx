@@ -87,48 +87,48 @@ export default function ProductsPage() {
     const transactionId = 'DHAFA_' + Math.floor(Math.random() * 10000000000).toString();
     
     // Prepare the payment data
-    const paymentData = {
-      amount: parseFloat(total),
-      currency: 'XAF',
-      transaction_id: transactionId,
-      description: `Purchase of ${cart.length} items from DHAFA Recycling`,
-      customer_name: customerName,
-      customer_email: customerEmail,
-      customer_phone_number: customerPhone,
-      channels: 'ALL',
-      return_url: window.location.origin + '/product?status=success',
-      notify_url: window.location.origin + '/api/payment-callback',
-      lang: 'en'
-    };
+    // const paymentData = {
+    //   amount: parseFloat(total),
+    //   currency: 'XAF',
+    //   transaction_id: transactionId,
+    //   description: `Purchase of ${cart.length} items from DHAFA Recycling`,
+    //   customer_name: customerName,
+    //   customer_email: customerEmail,
+    //   customer_phone_number: customerPhone,
+    //   channels: 'ALL',
+    //   return_url: window.location.origin + '/product?status=success',
+    //   notify_url: window.location.origin + '/api/payment-callback',
+    //   lang: 'en'
+    // };
     
     // Initialize CinetPay SDK
     // @ts-ignore - CinetPay is loaded from external script
-    CinetPay.setConfig({
-      apikey: 'YOUR_CINETPAY_API_KEY', // Replace with your actual API key
-      site_id: 'YOUR_SITE_ID',         // Replace with your actual Site ID
-      mode: 'TEST'               // Use 'TEST' for testing
-    });
+    // CinetPay.setConfig({
+    //   apikey: 'YOUR_CINETPAY_API_KEY', // Replace with your actual API key
+    //   site_id: 'YOUR_SITE_ID',         // Replace with your actual Site ID
+    //   mode: 'TEST'               // Use 'TEST' for testing
+    // });
     
     // @ts-ignore - CinetPay is loaded from external script
-    CinetPay.getCheckout({
-      transaction_id: paymentData.transaction_id,
-      amount: paymentData.amount,
-      currency: paymentData.currency,
-      channels: paymentData.channels,
-      description: paymentData.description,
-      customer_name: paymentData.customer_name,
-      customer_email: paymentData.customer_email,
-      customer_phone_number: paymentData.customer_phone_number,
-      customer_address: '',
-      customer_city: '',
-      customer_country: 'CM',
-      customer_state: '',
-      customer_zip_code: '',
-      notify_url: paymentData.notify_url,
-      return_url: paymentData.return_url,
-      lang: paymentData.lang,
-      metadata: JSON.stringify({ cart_items: cart })
-    });
+  //   CinetPay.getCheckout({
+  //     transaction_id: paymentData.transaction_id,
+  //     amount: paymentData.amount,
+  //     currency: paymentData.currency,
+  //     channels: paymentData.channels,
+  //     description: paymentData.description,
+  //     customer_name: paymentData.customer_name,
+  //     customer_email: paymentData.customer_email,
+  //     customer_phone_number: paymentData.customer_phone_number,
+  //     customer_address: '',
+  //     customer_city: '',
+  //     customer_country: 'CM',
+  //     customer_state: '',
+  //     customer_zip_code: '',
+  //     notify_url: paymentData.notify_url,
+  //     return_url: paymentData.return_url,
+  //     lang: paymentData.lang,
+  //     metadata: JSON.stringify({ cart_items: cart })
+  //   });
   };
 
   return (
@@ -271,7 +271,7 @@ export default function ProductsPage() {
       <Footer />
       
       {/* CinetPay SDK Script */}
-      <script
+      {/* <script
         dangerouslySetInnerHTML={{
           __html: `
             (function() {
@@ -282,7 +282,7 @@ export default function ProductsPage() {
             })();
           `,
         }}
-      />
+      /> */}
     </div>
   );
 }
